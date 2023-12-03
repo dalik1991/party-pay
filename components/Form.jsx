@@ -34,7 +34,7 @@ const Form = ({ type, post, setPost, submitting, handleSubmit }) => {
             disabled={submitting}
             className='form_submit'
           >
-            {submitting ? `${type}ing...` : type}
+            {submitting ? `Loading...` : type}
           </button>
         </div>
       </form>

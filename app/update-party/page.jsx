@@ -54,7 +54,7 @@ const UpdateParty = () => {
 
   return (
     <Form
-      type='Edit'
+      type='Apply'
       post={post}
       setPost={setPost}
       submitting={submitting}
