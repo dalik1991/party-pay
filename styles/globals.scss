@@ -252,6 +252,7 @@ input {
 
         .party_link_text {
             text-overflow: ellipsis;
+            word-break: keep-all;
             overflow: hidden;
             font-size: 1rem;
             line-height: 2rem;
