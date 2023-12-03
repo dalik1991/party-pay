@@ -240,7 +240,7 @@ input {
         }
 
         .party_creator_name {
-            font-family: "Antonio";
+            font-family: var(--font-antonio);
             text-transform: capitalize;
             font-size: 2rem;
         }
