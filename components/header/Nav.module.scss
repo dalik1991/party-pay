@@ -1,0 +1,56 @@
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--spacing-small) var(--spacing-large);
+}
+
+.logo {
+    svg {
+        color: var(--accent-color);
+        width: 10rem;
+        height: 2.5rem;
+        @media screen and (min-width: 768px) {
+            width: initial;
+            height: initial;
+        }
+    }
+}
+
+.account {
+    position: relative;
+    img {
+        width: 40px;
+        height: 40px;
+
+        @media screen and (min-width: 768px) {
+            width: initial;
+            height: initial;
+        }
+    }
+}
+
+.dropdown {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--secondary-color);
+    color: var(--font-secondary);
+    padding: 1rem;
+    width: 10rem;
+    right: 0;
+    top: calc(100% + 1rem);
+    gap: 0.5rem;
+}
+
+.button {
+    background-color: var(--secondary-color);
+    color: var(--font-secondary);
+    padding: var(--spacing-xsmall) var(--spacing-small);
+    border-radius: var(--spacing-small);
+    transition: 0.3s;
+    cursor: pointer;
+    &:hover {
+        background-color: var(--accent-color);
+    }
+}

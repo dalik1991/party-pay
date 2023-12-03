@@ -1,0 +1,306 @@
+@import url("https://fonts.googleapis.com/css2?family=Antonio:wght@700&family=Inter:wght@300&display=swap");
+
+:root {
+    --body-color: var(--third-color);
+
+    --accent-color: #fbca07;
+    --secondary-color: #fff;
+    --third-color: #000;
+
+    --danger-color: #ad2f00;
+    --safe-color: #0080ad;
+
+    --font-main: var(--secondary-color);
+    --font-secondary: var(--third-color);
+
+    --footer-background: var(--accent-color);
+    --footer-color: var(--third-color);
+
+    --spacing-xsmall: 0.5rem;
+    --spacing-small: 1rem;
+    --spacing-medium: 2rem;
+    --spacing-large: 3rem;
+
+    @media screen and (min-width: 768px) {
+        --spacing-xsmall: 1rem;
+        --spacing-small: 2rem;
+        --spacing-medium: 4rem;
+        --spacing-large: 6rem;
+    }
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    background-color: var(--body-color);
+    color: var(--font-main);
+}
+
+h1 {
+    font-family: "Antonio";
+    font-size: 4rem;
+    text-align: center;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: -0.2rem;
+    line-height: 1;
+    margin: 0 0 var(--spacing-large);
+
+    @media screen and (min-width: 768px) {
+        font-size: 10rem;
+        letter-spacing: -0.4rem;
+    }
+
+    span {
+        color: var(--accent-color);
+    }
+}
+
+a {
+    transition: 0.3s;
+    &:hover {
+        color: var(--accent-color);
+    }
+}
+
+input {
+    border: 2px solid var(--secondary-color);
+    padding: var(--spacing-small) var(--spacing-small);
+    font-size: 1rem;
+
+    @media screen and (min-width: 768px) {
+        padding: var(--spacing-small) var(--spacing-medium);
+        font-size: 2rem;
+    }
+
+    & + input {
+        margin-top: -2px;
+    }
+}
+
+.app {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.hero_section {
+    padding: 0 var(--spacing-large);
+    margin: 0 0 var(--spacing-large);
+
+    p {
+        font-size: 1rem;
+        line-height: 1.5;
+        text-align: center;
+
+        @media screen and (min-width: 768px) {
+            font-size: 1.4rem;
+        }
+    }
+}
+
+.form_section {
+    padding: 0 var(--spacing-large);
+    margin: 0 0 var(--spacing-large);
+
+    form {
+        display: flex;
+        flex-direction: column;
+        max-width: 40rem;
+        margin: 0 auto;
+
+        ::placeholder {
+            opacity: 0.5;
+        }
+
+        .form_buttons {
+            display: flex;
+            font-size: 1rem;
+            margin-top: -2px;
+
+            @media screen and (min-width: 768px) {
+                font-size: 2rem;
+            }
+
+            .form_cancel,
+            .form_submit {
+                text-align: center;
+                padding: var(--spacing-small) var(--spacing-medium);
+                text-transform: uppercase;
+                border: 2px solid var(--secondary-color);
+            }
+            .form_cancel {
+                flex: 1;
+                border-right: none;
+            }
+            .form_submit {
+                flex: 1;
+                background-color: var(--secondary-color);
+                color: #000;
+                cursor: pointer;
+                transition: 0.3s;
+                &:hover {
+                    background-color: var(--accent-color);
+                    border-color: var(--accent-color);
+                }
+            }
+        }
+    }
+}
+
+.profile_section {
+    padding: 0 var(--spacing-large);
+    margin: 0 0 var(--spacing-large);
+
+    .profile_description {
+        font-size: 1rem;
+        line-height: 1.5;
+        text-align: center;
+        margin: 0 0 2rem;
+
+        @media screen and (min-width: 768px) {
+            font-size: 1.4rem;
+        }
+    }
+
+    .party_card {
+        border: 2px solid var(--secondary-color);
+        max-width: 40rem;
+        margin: 0 auto;
+        padding: 3rem 0 var(--spacing-medium) calc(var(--spacing-small) - 2px);
+        position: relative;
+
+        @media screen and (min-width: 768px) {
+            padding: 3rem 0 var(--spacing-small)
+                calc(var(--spacing-medium) - 2px);
+        }
+
+        & + .party_card {
+            margin-top: 2rem;
+        }
+    }
+
+    .party_edit_buttons {
+        position: absolute;
+        right: -2px;
+        bottom: -2px;
+        display: flex;
+        height: 3rem;
+
+        @media screen and (min-width: 768px) {
+            bottom: -2px;
+            right: -2px;
+            top: -2px;
+        }
+
+        .edit_party,
+        .delete_party {
+            border: 2px solid var(--secondary-color);
+            cursor: pointer;
+            width: 3rem;
+            height: 3rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            svg {
+                width: 2rem;
+                height: 2rem;
+                color: var(--secondary-color);
+                transition: 0.3s;
+            }
+        }
+
+        .edit_party {
+            margin-right: -2px;
+            &:hover {
+                svg {
+                    color: var(--safe-color);
+                }
+            }
+        }
+
+        .delete_party {
+            &:hover {
+                svg {
+                    color: var(--danger-color);
+                }
+            }
+        }
+    }
+
+    .party_user_header {
+        position: absolute;
+        left: -2px;
+        top: -2px;
+        display: flex;
+        align-items: center;
+
+        img {
+            border: 2px solid var(--secondary-color);
+            width: 3rem;
+            height: 3rem;
+            margin-right: 1rem;
+        }
+
+        .party_creator_name {
+            font-family: "Antonio";
+            text-transform: capitalize;
+            font-size: 2rem;
+        }
+    }
+
+    .party_link {
+        display: flex;
+        align-items: center;
+
+        .party_link_text {
+            text-overflow: ellipsis;
+            overflow: hidden;
+            font-size: 1rem;
+            line-height: 2rem;
+            color: var(--accent-color);
+        }
+
+        .copy_button {
+            cursor: pointer;
+            min-width: calc(3rem - 2px);
+            width: calc(3rem - 2px);
+            height: 3rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            svg {
+                transition: 0.3s;
+                width: 2rem;
+                height: 2rem;
+            }
+
+            &:hover {
+                svg {
+                    color: var(--accent-color);
+                }
+            }
+        }
+    }
+}
+
+.profile_parties {
+    max-width: 40rem;
+    margin: 0 auto;
+
+    .profile_create_party {
+        display: block;
+        text-align: center;
+        padding: var(--spacing-xsmall) var(--spacing-medium);
+        text-transform: uppercase;
+        border: 2px solid var(--secondary-color);
+        margin-bottom: var(--spacing-small);
+        transition: 0.3s;
+
+        &:hover {
+            background-color: var(--accent-color);
+            border-color: var(--accent-color);
+            color: var(--third-color);
+        }
+    }
+}
