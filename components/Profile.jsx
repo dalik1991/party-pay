@@ -1,4 +1,4 @@
-import PartyCard from "./party-card/PartyCard";
+import PartyCard from "./PartyCard";
 import Link from 'next/link';
 
 const Profile = ({ name, desc, data, handleEdit, handleDelete }) => {

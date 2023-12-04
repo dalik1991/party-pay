@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 
-import PartyCard from "./party-card/PartyCard";
+import PartyCard from "./PartyCard";
 
 const PartyCardList = ({ data, handleTagClick }) => {
   return (

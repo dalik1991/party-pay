@@ -4,7 +4,7 @@ import { useState } from "react";
 import { useSession } from "next-auth/react";
 import { useRouter } from "next/navigation";
 
-import Form from "@components/party-form/PartyForm";
+import Form from "@components/PartyForm";
 
 const CreateParty = () => {
   const router = useRouter();

@@ -3,9 +3,9 @@ import "@styles/globals.scss";
 
 import fonts from './fonts'
 
-import Header from "@components/header/Header";
+import Header from "@components/Header";
 import Provider from "@components/Provider";
-import Footer from '@components/footer/Footer';
+import Footer from '@components/Footer';
 
 export const metadata = {
     title: "Party Pay",

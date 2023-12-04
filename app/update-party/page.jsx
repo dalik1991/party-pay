@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 
-import Form from "@components/party-form/PartyForm";
+import Form from "@components/PartyForm";
 
 const UpdateParty = () => {
   const router = useRouter();
