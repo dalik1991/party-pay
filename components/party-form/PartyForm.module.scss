@@ -1,0 +1,41 @@
+.form {
+    display: flex;
+    flex-direction: column;
+
+    ::placeholder {
+        opacity: 0.5;
+    }
+}
+
+.buttons {
+    display: flex;
+    font-size: 1rem;
+    margin-top: -2px;
+
+    @media screen and (min-width: 768px) {
+        font-size: 2rem;
+    }
+}
+
+.cancel,
+.submit {
+    text-align: center;
+    padding: var(--spacing-small) var(--spacing-medium);
+    text-transform: uppercase;
+    border: 2px solid var(--secondary-color);
+}
+.cancel {
+    flex: 1;
+    border-right: none;
+}
+.submit {
+    flex: 1;
+    background-color: var(--secondary-color);
+    color: var(--third-color);
+    cursor: pointer;
+    transition: 0.3s;
+    &:hover {
+        background-color: var(--accent-color);
+        border-color: var(--accent-color);
+    }
+}

@@ -4,7 +4,7 @@ import { useState } from "react";
 import { useSession } from "next-auth/react";
 import { useRouter } from "next/navigation";
 
-import Form from "@components/Form";
+import Form from "@components/party-form/PartyForm";
 
 const CreateParty = () => {
   const router = useRouter();
@@ -38,13 +38,18 @@ const CreateParty = () => {
   };
 
   return (
-    <Form
-      type='Create'
-      post={post}
-      setPost={setPost}
-      submitting={submitting}
-      handleSubmit={createParty}
-    />
+    <section className='form_section'>
+      <h1>Create <span>Party</span></h1>
+      <div className='container'>
+        <Form
+          post={post}
+          setPost={setPost}
+          submitting={submitting}
+          handleSubmit={createParty}
+          apply='Create'
+        />
+      </div>
+    </section>
   );
 };
 

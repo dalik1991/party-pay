@@ -1,0 +1,122 @@
+.card {
+    border: 2px solid var(--secondary-color);
+    padding: 3rem 0 var(--spacing-medium) calc(var(--spacing-small) - 2px);
+    position: relative;
+
+    @media screen and (min-width: 768px) {
+        padding: 3rem 0 var(--spacing-small) calc(var(--spacing-medium) - 2px);
+    }
+
+    & + & {
+        margin-top: 2rem;
+    }
+}
+
+.header {
+    position: absolute;
+    left: -2px;
+    top: -2px;
+    display: flex;
+    align-items: center;
+
+    img {
+        border: 2px solid var(--secondary-color);
+        width: 3rem;
+        height: 3rem;
+        margin-right: 1rem;
+    }
+
+    .name {
+        font-family: var(--font-antonio);
+        text-transform: capitalize;
+        font-size: 2rem;
+    }
+}
+
+.link {
+    display: flex;
+    align-items: center;
+
+    .link_text {
+        text-overflow: ellipsis;
+        word-break: keep-all;
+        overflow: hidden;
+        font-size: 1rem;
+        line-height: 2rem;
+        color: var(--accent-color);
+    }
+
+    .copy {
+        cursor: pointer;
+        min-width: calc(3rem - 2px);
+        width: calc(3rem - 2px);
+        height: 3rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        svg {
+            transition: 0.3s;
+            width: 2rem;
+            height: 2rem;
+        }
+
+        &:hover {
+            svg {
+                color: var(--accent-color);
+            }
+        }
+    }
+}
+
+.tag {
+    font-size: 0.8rem;
+}
+
+.buttons {
+    position: absolute;
+    right: -2px;
+    bottom: -2px;
+    display: flex;
+    height: 3rem;
+
+    @media screen and (min-width: 768px) {
+        bottom: -2px;
+        right: -2px;
+        top: -2px;
+    }
+}
+
+.edit,
+.delete {
+    border: 2px solid var(--secondary-color);
+    cursor: pointer;
+    width: 3rem;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    svg {
+        width: 2rem;
+        height: 2rem;
+        color: var(--secondary-color);
+        transition: 0.3s;
+    }
+}
+
+.edit {
+    margin-right: -2px;
+    &:hover {
+        svg {
+            color: var(--safe-color);
+        }
+    }
+}
+
+.delete {
+    &:hover {
+        svg {
+            color: var(--danger-color);
+        }
+    }
+}
